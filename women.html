@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>women</title>
+</head>
+<style>
+    #container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
+    }
+    #container>div>img{
+        width:100%;
+    }
+    #container>div{
+        text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    #main{
+        margin:auto;
+        text-align: center;
+    }
+    
+</style>
+<body>
+    <h1 id="main">WHAT TO WEAR WHERE</h1>
+  <div id="container"></div>
+</body>
+
+<script>
+    let container = document.getElementById("container");
+
+
+    fetch("https://63c40e50f0028bf85fa1ed80.mockapi.io/product")
+    .then((responseObject) =>{
+        return responseObject.json()
+    })
+    .then((actualData) =>{
+        displayProducts(actualData)
+    })
+    .catch((error) =>{
+        console.log(error)
+    })
+      
+
+
+
+    function displayProducts(data){
+         data.forEach((element) => {
+             let product = document.createElement("div");
+             let image = document.createElement("img");
+             image.setAttribute("src",element.title);
+             
+             let description = document.createElement("p");
+             description.innerText = element.category;
+             let price = document.createElement("p");
+             price.innerText = element.price;
+
+             product.append(image,description,price)
+             container.append(product)
+         });
+    }
+</script>
+</html
