@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<style>
+      #container{
+        width:30%;
+        margin:auto;
+        height:300px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        background-color: aquamarine;
+      }
+      #inside-container{
+        width:80%;
+        padding:20px;
+        
+        margin:auto
+      }
+      #inside-container>form>input{
+        margin-top: 15px;
+        height:30px;
+        
+      }
+      #inside-container>form{
+        margin:20px
+      }
+      
+
+      
+      #inside-container>form>button{
+        background-color: blue;
+        color:white
+      }
+</style>
+<body>
+    <div id="container">
+        <div id="inside-container">
+            <form id="form">
+                <input id="mail" type="text"  placeholder="Enter your email"/>
+                <input id="pass" type="text" placeholder="Password"/>
+                <input id="submit" type=submit value="Submit"/>
+                <h5>Don't Have an account</h5>
+                <input id="signup" type="submit" value="signup"/>
+               
+            </form>
+           
+        </div>
+    </div>
+    
+</body>
+<script>
+    let arr=JSON.parse(localStorage.getItem("signin")) || [];
+    document.querySelector("#signup").addEventListener("click",signup)
+    function signup(event){
+        event.preventDefault()
+        document.querySelector("#form").innerHTML=""
+        let div=document.createElement("div")
+        document.querySelector("#form").append(div)
+        let input1=document.createElement("input")
+        input1.setAttribute("placeholder","Enter-Mail")
+        
+        let input2=document.createElement("input")
+        input2.setAttribute("placeholder","Password")
+        
+        let input3=document.createElement("input")
+        input3.setAttribute("type","submit")
+        input3.setAttribute("value","Submit")
+        input3.setAttribute("id","signedin")
+        input3.addEventListener("click",loggein)
+       div.append(input1,input2,input3)
+
+          function loggein(event){
+            event.preventDefault()
+            let email=input1.value
+            let password= input2.value
+             if(email=="" || password==""){
+              alert ("data is not appropriate")
+             }else{
+               let obj={
+                email ,
+                password
+               }
+               arr.push(obj)
+               localStorage.setItem("signin",JSON.stringify(arr))
+               alert ("signedup successfully")
+             }
+             
+             
+             
+        }
+
+    }
+    document.querySelector("#submit").addEventListener("click",loggedin)
+    function loggedin(event){
+      event.preventDefault()
+      let x=document.querySelector("#mail").value
+      let y=document.querySelector("#pass").value
+      arr.forEach(element => {
+        if(element.email==x && element.password==y){
+          alert ("loggedin Successful")
+        }else{
+          alert ("wrong credentials")
+        }
+      });
+    }
+    
+   
+   
+</script>
+</html>
