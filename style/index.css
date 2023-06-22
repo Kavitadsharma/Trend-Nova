@@ -1,0 +1,117 @@
+#bar{
+    width:100%;
+    height:50px;
+    background-color: black;
+    color:white;
+    text-align: center;
+    padding-top: 1px;
+}
+#secbar{
+    width:100%;
+    height:50px;
+    display:flex;
+    justify-content: end;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    
+}
+#secbar>div{
+    margin-left: 50px;
+    text-align: center;
+    
+}
+#secbar>div>img{
+    width:30%;
+}
+#j{
+    padding-top: 15px;
+    padding-right: 10px;
+}
+#logo{
+    display:flex;
+    justify-content: space-between;
+}
+
+
+#logo :nth-child(1){
+    width:50%;
+
+}
+#nav{
+    justify-content: space-evenly;
+    color: black;
+    display: flex;
+}
+#nav a{
+    color: black;
+}
+#sky{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height:100px;
+    background-color: teal;
+    margin-top: 30px;
+}
+#sky :nth-child(1){
+    
+    color: white;
+    text-align: center;
+}
+#sky :nth-child(2){
+  
+    color: white;
+    text-align: center;
+}
+#sky :nth-child(3){
+    
+    color: white;
+    text-align: center;
+}
+#black{
+    background-color: black;
+    margin-top: 20px;
+    padding-top: 20px;
+    display:flex;
+    justify-content: space-evenly;
+}
+#black a{
+    color: white;
+    position: center;
+    
+}
+#head{
+    margin:auto;
+    text-align: center;
+    margin-top: 30px;
+}
+#img{
+    display:flex;
+    justify-content: space-evenly;
+
+}
+#img div{
+    text-align: center;
+    width:15%;
+
+}
+#img img{
+    width:100%
+}
+#heading{
+    margin:auto
+}
+#main{
+    display:flex;
+    text-align: center;
+    margin-top: 40px;
+}
+#customer{
+    display:flex;
+    justify-content: space-evenly;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+#slideshow{
+    margin-top: 40px;
+}

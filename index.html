@@ -6,104 +6,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #bar{
-            width:100%;
-            height:50px;
-            background-color: black;
-            color:white;
-            text-align: center;
-            padding-top: 1px;
-        }
+       
         #secbar{
             width:100%;
-            height:50px;
-            display:flex;
-            justify-content: end;
-            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-            
-        }
-        #secbar>div{
-            margin-left: 50px;
-            text-align: center;
-            
-        }
-        #secbar>div>img{
-            width:30%;
-        }
-        #j{
-            padding-top: 15px;
-            padding-right: 10px;
-        }
-        #logo{
-            display:flex;
-            justify-content: space-between;
-        }
-        
-        
-        #logo :nth-child(1){
-            width:50%;
-        
-        }
-        #nav{
-            justify-content: space-evenly;
-            color: black;
-            display: flex;
-        }
-        #nav a{
-            color: black;
-        }
-        #sky{
-            display: flex;
-            justify-content: space-evenly;
-            width: 100%;
             height:100px;
-            background-color: teal;
-            margin-top: 30px;
-        }
-        #sky :nth-child(1){
-            
-            color: white;
-            text-align: center;
-        }
-        #sky :nth-child(2){
+            display:grid;
+            grid-template-columns: repeat(3,1fr);
           
-            color: white;
-            text-align: center;
-        }
-        #sky :nth-child(3){
+
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        
+            }
+   #cart{
+    width:40%;
+    height:100px;
+    display:grid;
+            grid-template-columns: repeat(3,1fr);
+          margin-left: 300px;
+         justify-content: space-between;
+
+   }
+   #cart>div{
+    width:90%;
+    height:100px;
+    margin-right: 10px;
+   
+    justify-content: center;
+
+   }
+   #cart>div>img{
+    width:60px;
+    height:30px;
+    margin-top: 40px;
+
+   }
+   #cart>div>h4{
+   
+    margin: auto;
+   }
+ #logo{margin: auto;
+            width:50%;
+            height:100px;
             
-            color: white;
-            text-align: center;
+            margin-right: 250px;
+           
         }
-        #black{
-            background-color: black;
-            margin-top: 20px;
-            padding-top: 20px;
-            display:flex;
-            justify-content: space-evenly;
+        #logo>img{
+            width:80%;
+            height:100px
         }
-        #black a{
-            color: white;
-            position: center;
+
+
+        #link{
+            width:120%;
+            height:100px;
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
             
+            margin-right: 350px;
+            justify-content: space-between;
+           
         }
+        #link>div{
+
+            margin: auto;
+        }
+        /* first part end */
+  
+        
         #head{
             margin:auto;
             text-align: center;
             margin-top: 30px;
         }
         #img{
-            display:flex;
+            width:100%;
+            height:500px;
+            display:grid;
+            grid-template-columns: repeat(6,1fr);
             justify-content: space-evenly;
 
         }
         #img div{
-            text-align: center;
-            width:15%;
+           width:80%;
+           height:500px
+
 
         }
         #img img{
-            width:100%
+            width:100%;
+            height:300px
         }
         #heading{
             margin:auto
@@ -128,75 +120,64 @@
     </style>
 </head>
 <body>
-    <div id="bar">
-        <h4>Long weekend sale:take extra 40%off items labeled extra 40%OFF. Plus,save 25-40% on an large selection of items. Ends 1/16 <u>INFO</u> / <u>SHOP NOW</u></h4>
-    </div>
+   
     <div id="secbar">
-        <div><p>Store & Event    |</p></div>
-        
-        <div><p>Shopping Services   |</p></div>
-        
-        <div id="j"><img src="https://assets.bloomingdales.com/feature/header-bcom/latest/images/flags/IN.png">
-        INR</div>
-    </div>
-    <div id="logo"><div>
-        <img src="charmkart.png">
-    </div>
-        <div>
-        <input type="text" placeholder="Search..">
-        <a href="#contact">CART</a></div>
-    </div>
-    <div id="nav">
-        <div >
-        <a href="women.html">WOMEN</a>
+        <div id="logo">
+            <img src="./img.png"></div>
+            <div id="link">
+                <div><a href="./women.html">WOMEN</a></div> 
+                <div><a href="#shoes">SHOES</a></div> 
+                <div><a href="#handbag">HANDBAGS</a></div> 
+                <div><a href="#jwellery">JWELLERY</a></div> 
+                <div> <a href="./men.html">MEN</a></div> 
+
+            </div>
+<div id="cart">
+          <div >
+            <img src="https://cdn.icon-icons.com/icons2/3478/PNG/96/register_login_signup_icon_219991.png" alt="">
+            <h4><a href="./signup.html">Register</a></h4>
+          </div>
+          <div >
+            <img src="https://cdn.icon-icons.com/icons2/1148/PNG/96/1486503792-bookmark-wishlist-favorites-favourite-heart-like-love_81249.png" alt="">
+            <h4>Whishlist</h4>
+          </div>
+          <div >
+            <img src="https://cdn.icon-icons.com/icons2/933/PNG/96/shopping-cart_icon-icons.com_72552.png" alt="">
+            <h4>Cart</h4>
+          </div>
         </div>
-      <div>  <a href="#shoes">SHOES</a></div>
-      <div>  <a href="#handbag">HANDBAGS</a> </div>
-       <div> <a href="#jwellery">JWELLERY</a> </div>
-      <div> <a href="./men.html">MEN</a> </div> 
-    </div>
     
-        <div id="sky">
-        <div><H1>LONG WEEKEND SALE</H1></div>
-        <div><h2>Save 25-40%</h2>
-        <p>on a large</p>
-        
-         </div>
-        <div><h2>PLUS TAKE AN EXTRA 40%OFF</h2>
-        <h3>item labeled extra 40%off for a</h3>
-       
-        </div>
-        </div>
-        <div id="black">
-           <div><a href="#women">WOMEN</a></div> 
-           <div><a href="#shoes">SHOES</a></div> 
-           <div><a href="#handbag">HANDBAGS</a></div> 
-           <div><a href="#jwellery">JWELLERY</a></div> 
-           <div>  <a href="#men">MEN</a></div> 
-           </div>
+    </div>
+
+
+    <!-- secbar -->
+    
+
+      
+           <!-- /black enf -->
            <div id = "slideshow"></div>
            <h1 id="head">RECOMMENDED FOR YOU</h1>
            <div id="img">
             <div>
                 <img src="https://images.bloomingdalesassets.com/is/image/BLM/products/9/optimized/11974179_fpx.tif?op_sharpen=1&wid=240&hei=300&fit=fit,1&qlt=50&layer=comp&op_sharpen=0&resMode=bicub&op_usm=0.7,1.0,0.5,0&fmt=jpeg">
-                <h3>ANCIENT GREEK SANDALS</h3>
-                <P>Now INR=1200</P>
+                <h3>GREEK SANDALS</h3>
+                <P>INR 1200</P>
             </div>
-            <div><img src="https://images.bloomingdalesassets.com/is/image/BLM/products/9/optimized/11974179_fpx.tif?op_sharpen=1&wid=240&hei=300&fit=fit,1&qlt=50&layer=comp&op_sharpen=0&resMode=bicub&op_usm=0.7,1.0,0.5,0&fmt=jpeg">
-                <h3>ANCIENT GREEK SANDALS</h3>
-                <P>Now INR=1200</P></div>
-            <div><img src="https://images.bloomingdalesassets.com/is/image/BLM/products/9/optimized/11974179_fpx.tif?op_sharpen=1&wid=240&hei=300&fit=fit,1&qlt=50&layer=comp&op_sharpen=0&resMode=bicub&op_usm=0.7,1.0,0.5,0&fmt=jpeg">
-                <h3>ANCIENT GREEK SANDALS</h3>
-                <P>Now INR=1200</P></div>
-            <div><img src="https://images.bloomingdalesassets.com/is/image/BLM/products/9/optimized/11974179_fpx.tif?op_sharpen=1&wid=240&hei=300&fit=fit,1&qlt=50&layer=comp&op_sharpen=0&resMode=bicub&op_usm=0.7,1.0,0.5,0&fmt=jpeg">
-                <h3>ANCIENT GREEK SANDALS</h3>
-                <P>Now INR=1200</P></div>
-            <div><img src="https://images.bloomingdalesassets.com/is/image/BLM/products/9/optimized/11974179_fpx.tif?op_sharpen=1&wid=240&hei=300&fit=fit,1&qlt=50&layer=comp&op_sharpen=0&resMode=bicub&op_usm=0.7,1.0,0.5,0&fmt=jpeg">
-                <h3>ANCIENT GREEK SANDALS</h3>
-                <P>Now INR=1200</P></div>
-            <div><img src="https://images.bloomingdalesassets.com/is/image/BLM/products/9/optimized/11974179_fpx.tif?op_sharpen=1&wid=240&hei=300&fit=fit,1&qlt=50&layer=comp&op_sharpen=0&resMode=bicub&op_usm=0.7,1.0,0.5,0&fmt=jpeg">
-                <h3>ANCIENT GREEK SANDALS</h3>
-                <P>Now INR=1200</P></div>
+            <div><img src="https://images.meesho.com/images/products/71211818/jzyor_400.webp">
+                <h3>Modern women Dress</h3>
+                <P>INR 1200</P></div>
+            <div><img src="https://images.meesho.com/images/products/23325912/53f0f_400.webp">
+                <h3>Georgette lace Saree</h3>
+                <P> INR 1200</P></div>
+            <div><img src="https://images.meesho.com/images/products/160123304/ipvp0_400.webp">
+                <h3>Lehariya Geogette Saree</h3>
+                <P>INR 1600</P></div>
+            <div><img src="https://images.meesho.com/images/products/152327823/wvayt_400.webp">
+                <h3>Aishani Peitite Kurtis</h3>
+                <P>INR 500</P></div>
+            <div><img src="https://images.meesho.com/images/products/5932046/675e9_400.webp">
+                <h3>Women Cotton Kurta</h3>
+                <P>INR 1100</P></div>
            </div>
            
            <div id="main">
@@ -241,7 +222,7 @@
     var Images = [
   "https://images.bloomingdalesassets.com/is/image/BcomMedia/media/0117_0118_D_02_CAR_c_RTW_Coats.jpg?scl=1&fmt=webp&wid=1440",
   "https://images.bloomingdalesassets.com/is/image/BcomMedia/media/0117_0118_D_02_CAR_d_MEN_Coats.jpg?scl=1&fmt=webp&wid=1440",
-  "https://images.bloomingdalesassets.com/is/image/BcomMedia/media/0117_0118_D_02_CAR_a_MULTI_LNY_WaterRabbit.jpg?scl=1&fmt=webp&wid=1440",
+//   "https://images.bloomingdalesassets.com/is/image/BcomMedia/media/0117_0118_D_02_CAR_a_MULTI_LNY_WaterRabbit.jpg?scl=1&fmt=webp&wid=1440",
   "https://images.bloomingdalesassets.com/is/image/BcomMedia/media/0117_0118_D_02_CAR_e_MEN_Denim.jpg?scl=1&fmt=webp&wid=1440",
  
 ]
@@ -266,3 +247,4 @@ kavita.append(myImg)
    }
 }, 3000);
 </script>
+<script src="https://icon-icons.com/"></script>
