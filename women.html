@@ -7,34 +7,177 @@
     <title>women</title>
 </head>
 <style>
-    #container{
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        gap: 20px;
-    }
-    #container>div>img{
-        width:100%;
-    }
-    #container>div{
-        text-align: center;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    }
-    #main{
-        margin:auto;
-        text-align: center;
-    }
+    
+    #secbar{
+            width:100%;
+            height:100px;
+            display:grid;
+            grid-template-columns: repeat(3,1fr);
+          
+
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        
+            }
+   #cart{
+    width:40%;
+    height:100px;
+    display:grid;
+            grid-template-columns: repeat(3,1fr);
+          margin-left: 300px;
+         justify-content: space-between;
+
+   }
+   #cart>div{
+    width:90%;
+    height:100px;
+    margin-right: 10px;
+   
+    justify-content: center;
+
+   }
+   #cart>div>img{
+    width:60px;
+    height:30px;
+    margin-top: 40px;
+
+   }
+   #cart>div>h4{
+   
+    margin: auto;
+   }
+ #logo{margin: auto;
+            width:50%;
+            height:100px;
+            
+            margin-right: 250px;
+           
+        }
+        #logo>img{
+            width:80%;
+            height:100px
+        }
+
+
+        #link{
+            width:120%;
+            height:100px;
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            
+            margin-right: 350px;
+            justify-content: space-between;
+           
+        }
+        #link>div{
+
+            margin: auto;
+        }
+
+        /* nav completet here */
+#women{
+    width:100%;
+    height:600px;
+    display: flex;
+   justify-content: space-between;
+   
+}
+#slideshow{
+    width:70%;
+    height:600px;
+  
+}
+#slideshow>img{
+    width:1000px;
+    height:500px;
+    margin-top: 50px;
+}
+
+#side{
+    width:20%;
+    height:600px;
+   
+  padding-left: 50px;
+}
+ #container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+#container>div>img{
+    width:100%;
+    height:auto
+}
+#container>div{
+    text-align: center;
+box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+#main{
+    margin:auto;
+    text-align: center;
+}
+   
     
 </style>
 <body>
+    
+    <div id="secbar">
+        <div id="logo">
+            <img src="./img.png"></div>
+            <div id="link">
+                <div><a href="./women.html">WOMEN</a></div> 
+                <div><a href="#shoes">SHOES</a></div> 
+                <div><a href="#handbag">HANDBAGS</a></div> 
+                <div><a href="#jwellery">JWELLERY</a></div> 
+                <div> <a href="./men.html">MEN</a></div> 
+
+            </div>
+<div id="cart">
+          <div >
+            <img src="https://cdn.icon-icons.com/icons2/3066/PNG/96/user_person_profile_avatar_icon_190943.png" alt="">
+            <h4>Profile</h4>
+          </div>
+          <div >
+            <img src="https://cdn.icon-icons.com/icons2/1148/PNG/96/1486503792-bookmark-wishlist-favorites-favourite-heart-like-love_81249.png" alt="">
+            <h4>Whishlist</h4>
+          </div>
+          <div >
+            <img src="https://cdn.icon-icons.com/icons2/933/PNG/96/shopping-cart_icon-icons.com_72552.png" alt="">
+            <h4>Cart</h4>
+          </div>
+        </div>
+    
+    </div>
+    <!-- nav complete here -->
+   <div id="women">
+    <div id="side">
+        <h1>WOMEN</h1>
+        <h3>CLOTHING</h3>
+        <h5>Active & Workout</h5>
+        <h5>Blazers</h5>
+        <h5>Coats & Jackets</h5>
+        <h5>Dresses</h5>
+        <h5>Jeans & Denims</h5>
+        <h5>Jumpsuits & Roampers</h5>
+        <h5>Loungewear</h5>
+        <h5>Matching Sets</h5>
+        <h5>Maternity</h5>
+        <h5>Pants & Leggings</h5>
+        <h5>Shorts</h5>
+        <h5>Skirta</h5>
+    </div>
+    <div id="slideshow"></div></div>
     <h1 id="main">WHAT TO WEAR WHERE</h1>
-  <div id="container"></div>
+  <div id="container">
+    
+  </div>
 </body>
 
 <script>
     let container = document.getElementById("container");
 
 
-    fetch("https://63c40e50f0028bf85fa1ed80.mockapi.io/product")
+    fetch("http://localhost:4500/product/all")
     .then((responseObject) =>{
         return responseObject.json()
     })
@@ -52,10 +195,10 @@
          data.forEach((element) => {
              let product = document.createElement("div");
              let image = document.createElement("img");
-             image.setAttribute("src",element.title);
+             image.setAttribute("src",element.image);
              
              let description = document.createElement("p");
-             description.innerText = element.category;
+             description.innerText = element.name;
              let price = document.createElement("p");
              price.innerText = element.price;
 
@@ -63,5 +206,34 @@
              container.append(product)
          });
     }
+</script>
+<script>
+    var Images = [
+  "https://images.bloomingdalesassets.com/is/image/BcomMedia/media/0117_0118_D_02_CAR_c_RTW_Coats.jpg?scl=1&fmt=webp&wid=1440",
+  "https://images.bloomingdalesassets.com/is/image/BcomMedia/media/0117_0118_D_02_CAR_d_MEN_Coats.jpg?scl=1&fmt=webp&wid=1440",
+//   "https://images.bloomingdalesassets.com/is/image/BcomMedia/media/0117_0118_D_02_CAR_a_MULTI_LNY_WaterRabbit.jpg?scl=1&fmt=webp&wid=1440",
+  "https://images.bloomingdalesassets.com/is/image/BcomMedia/media/0117_0118_D_02_CAR_e_MEN_Denim.jpg?scl=1&fmt=webp&wid=1440",
+ 
+]
+let kavita=document.getElementById("slideshow")
+console.log(Images.length)
+let i = 0;
+
+setInterval(function () {
+    Images.forEach((element,index)=>{
+        if(i===index){
+    let myImg=document.createElement("img")
+    myImg.setAttribute("src",element)
+    kavita.innerHTML=null
+kavita.append(myImg)
+        }
+});
+    
+   i++
+   
+ if(i>=Images.length){
+    i=0
+   }
+}, 3000);
 </script>
 </html
