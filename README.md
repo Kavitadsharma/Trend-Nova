@@ -1,3 +1,4 @@
+
 <h1>TREND NOVA</h1>
 
 ![Bloomingdale's](https://github.com/Kavitadsharma/project-1/assets/115460412/5ee264fc-b646-4e87-af93-a09ef1eb7b24)
